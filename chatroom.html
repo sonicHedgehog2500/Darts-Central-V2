@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Chatroom</title>
+		<link rel="stylesheet" href="dartsStyle.css"/>
+		<link rel="shortcut icon" href="Images/logo.png" />
+		<script src="dartsScript.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+	</head>
+	
+	<body onload="maintenanceAlert()">
+		<!--Header-->
+		<header>
+			<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
+			
+			<input type="checkbox" id="checkBox">
+		
+			<label for="checkBox" id="menuIcon">
+				<i class="fa fa-bars"></i>
+			</label>
+			
+			<!--Menu-->
+			<nav id="menu">
+				<label for="checkBox" id="closeButton"><i class="fa fa-times"></i></label>
+				
+				<a href="index.html">home</a>
+				<a href="rules.html">rules</a>
+				<a href="players.html">players</a>
+				<a href="competitions.html">competitions</a>
+				<a href="chatroom.html">chatroom</a>
+			</nav>
+		</header>
+		
+		<!--Main Content-->
+		<div id="mainContainer">
+			<!--Banner-->
+			<div id="banner">
+				<h1>chatroom</h1>
+				<p>
+					Get involved in the many ongoing darts conversations
+				</p>
+			</div>
+			
+			<!--Main Page Content-->
+			<div class="container">
+				<div id="chatBoardContainer">
+					<div class="container" id="messageControlsContainer">
+						<textarea id="inputMessageField" placeholder="Enter your message..."></textarea>
+						
+						<button id="sendMessageButton" class="button" onclick="maintenanceAlert()"><i class="fa fa-paper-plane"></i> send</button>
+					</div>
+					
+					<div class="container" id="messageBoardContainer">
+						<div id="messageBoard"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Footer-->
+		<footer>
+			<span id="disclaimer" onclick="viewDisclaimer()">disclaimer</span>
+		</footer>
+	</body>
+</html>
