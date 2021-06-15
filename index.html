@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Darts Central</title>
+		<link rel="stylesheet" href="dartsStyle.css"/>
+		<script src="dartsScript.js"></script>
+		<link rel="shortcut icon" href="Images/logo.png"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<!--Header-->
+		<header>
+			<input type="checkbox" id="checkbox">
+
+			<a href="index.html"><img src="Images/logo.png" alt="logo" id="logo"></a>
+
+			<label for="checkbox" id="menu-icon">
+				<i class="fa fa-bars"></i>
+			</label>
+
+			<!--Menu-->
+			<nav id="menu">
+				<div class="container container-controls">
+					<label for="checkbox" class="controls" id="close-button"><i class="fa fa-times"></i></label>
+				</div>
+
+				<a href="index.html">home</a>
+				<a href="rules.html">rules</a>
+				<a href="players.html">players</a>
+				<a href="competitions.html">competitions</a>
+				<a href="chatroom.html">chatroom</a>
+			</nav>
+		</header>
+
+		<!--Main Content Container-->
+		<main>
+			<div id="banner">
+				<h1>darts central</h1>
+			</div>
+		
+			<div class="container">
+				<div class="container container-content" id="home-container">
+					<a href="rules.html" class="card card-page" style="background-image: url(Images/home/Page-Cards/rules-card-image.jpeg)">
+						<div class="card-body">
+							<h1 class="card-title">rules</h1>
+						</div>
+					</a>
+					
+					<a href="players.html" class="card card-page" style="background-image: url(Images/home/Page-Cards/players-card-image.jpeg)">
+						<div class="card-body">
+							<h1 class="card-title">players</h1>
+						</div>
+					</a>
+					
+					<a href="competitions.html" class="card card-page" style="background-image: url(Images/home/Page-Cards/competitions-card-image.jpeg)">
+						<div class="card-body">
+							<h1 class="card-title">competitions</h1>
+						</div>
+					</a>
+					
+					<a href="chatroom.html" class="card card-page" style="background-image: url(Images/home/Page-Cards/chatroom-card-image.jpeg)">
+						<div class="card-body">
+							<h1 class="card-title">chatroom</h1>
+						</div>
+					</a>
+				</div>
+			</div>
+		</main>
+
+		<!--Footer-->
+		<footer>
+			<span id="disclaimer" onclick="viewDisclaimer()">disclaimer</span>
+		</footer>
+
+	</body>
+</html>

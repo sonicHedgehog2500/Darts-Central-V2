@@ -1,0 +1,705 @@
+html, body{
+	font-family: calibri;
+	line-height: 30px;
+	margin: auto;
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+a, span, h1, h2{
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: normal;
+	color: white;
+}
+
+button{
+	color: white;
+	border: none;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 10px;
+	background-color: #00802b;
+}
+
+textarea{
+	border: none;
+}
+
+#checkbox{
+	display: none;
+}
+
+/*****Card Styling*****/
+.card{
+	max-width: 100%;
+	min-height: 300px;
+	width: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+	/*****Card Body Styling*****/
+	.card-body{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0,0,0,0.5);
+	}
+
+/*****Collapse Styling*****/
+.collapse{
+	margin: 0px 10px;
+	border: 0.5px solid silver;
+}
+
+	/*****Collapse Checkbox Styling*****/
+	.collapse-checkbox{
+		display: none;
+	}
+
+	/*****Collapse Header Styling*****/
+	.collapse-header{
+		position: relative;
+		z-index: initial;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		color: white;
+		background-color: #00802b;
+		transition: background 1s;
+	}
+
+		.collapse-header h1{
+			padding: 0px 5px;
+		}
+
+		.collapse-header::after{
+			content: "+";
+			font-size: 2em;
+			padding: 0px 5px;
+		}
+
+	/*****Collapse Content Container Styling*****/
+	.container-collapse-content{
+		display: flex;
+		flex-direction: column;
+		height: 0;
+		overflow: hidden;
+		transition: 0.5s;
+	}
+
+		/*****Collapse Item Styling*****/
+		.collapse-item{
+			display: grid;
+		}
+
+			/*****Collapse Image & Video Styling*****/
+			.collapse-item img, .collapse-item iframe{
+				height: 300px;
+				border: none;
+			}
+
+			/*****Collapse Item Body Styling*****/
+			.collapse-item-body h1{
+				color: black;
+			}
+
+			.collapse-item-body p{
+				text-align: justify;
+			}
+
+	/*****Change Header Color When Collapse Is Clicked*****/
+	.collapse-checkbox:checked ~ .collapse-header{
+		background: black;
+	}
+
+	/*****Change Header Icon When Collapse Is Clicked*****/
+	.collapse-checkbox:checked ~ .collapse-header::after{
+		content: "-";
+	}
+
+	/*****Set Height To Maximum When Collapse Is Clicked*****/
+	.collapse-checkbox:checked ~ .container-collapse-content{
+		height: 100%;
+	}
+
+/*****Slider Styling*****/
+.slider{
+	overflow: hidden;
+}
+
+	/*****Slider Item Styling*****/
+	.slider-item{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+		/*****Slider Item Body Styling*****/
+		.slider-item-body{
+			min-height: 100%;
+			font-size: 1rem;
+			text-align: center;
+			background-color: rgba(0,0,0,0.5);
+		}
+
+	/*****Horizontal Slider Styling*****/
+	.slider-horizontal{
+		width: 100%;
+		overflow-x: scroll;
+		margin: 5px 0px;
+	}
+
+		.slider-horizontal .container-slider{
+			display: flex;
+			flex-direction: row;
+			white-space: pre-wrap;
+			padding: 10px 0px;
+		}
+
+			.slider-horizontal .container-slider .slider-item{
+				margin-right: 10px;
+			}
+
+/*****Modal Styling*****/
+.modal-window{
+	height: 100vh;
+	position: fixed;
+	top: 0%;
+	left: 200%;
+	z-index: 1;
+	overflow-y: scroll;
+	transition: all 1s ease-in;
+	background-color: rgba(0,0,0,0.8);
+}
+
+	/*****Modal Window Header Styling*****/
+	.modal-window header{
+		position: initial;
+		z-index: initial;
+		background-color: transparent;
+	}
+
+	/*****Modal Window Image Styling*****/
+	.modal-window img{
+		width: 100%;
+	}
+
+	/*****Modal Window Text Styling*****/
+	.modal-window-text{
+		display: flex;
+		flex-direction: column;
+	}
+
+		.modal-window-text h2{
+			padding-left: 5px;
+		}
+
+		.modal-window-text p{
+			text-transform: capitalize;
+			display: flex;
+			flex-direction: column;
+			color: white;
+			padding-left: 10px;
+		}
+
+	.modal-window:target{
+		left: 0%;
+	}
+
+/*****Section Title Styling*****/
+.section-title{
+	color: #00802b;
+}
+
+/*****Controls Container Styling*****/
+.container-controls{
+	margin: 0px 10px;
+	padding: 5px;
+}
+
+	.container-controls .controls{
+		margin: 0px 5px;
+		padding: 5px;
+	}
+
+/*****Content Container Styling*****/
+.container-content{
+	display: grid;
+	grid-gap: 5px;
+}
+
+/*****Header Styling*****/
+header{
+	width: 100%;
+	position: fixed;
+	top: 0%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1;
+	color: white;
+	background-color: #00802b;
+}
+
+	/*****Logo Styling*****/
+	header #logo{
+		max-width: 100px;
+		max-height: 100px;
+		width: auto;
+		height: auto;
+		margin: 0px 10px;
+		padding: 5px;
+	}
+
+	/*****Menu Styling*****/
+	header #menu-icon{
+		margin: 0px 10px;
+		padding: 5px;
+	}
+
+/*****Main Content Styling*****/
+main{
+	display: block;
+	overflow: auto;
+	min-height: 100%;
+	padding-top: 7em;
+}
+
+	/*****Banner Styling*****/
+	main #banner{
+		width: 100%;
+		height: 90vh;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Images/banner-image.jpeg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: white;
+	}
+
+		main #banner p{
+			text-transform: capitalize;
+			letter-spacing: 2px;
+		}
+
+	/*****Homepage Styling*****/
+
+	/*****Rules Page Styling*****/
+	#rules-container{
+		overflow: hidden;
+		padding: 10px 0px;
+	}
+
+		#rules-container .collapse .container-collapse-content .collapse-item{
+			margin: 10px 0px;
+		}
+
+	/*****Players Page Styling*****/
+
+		/*****Player Modal Window Styling*****/
+
+			/*****Player Modal Window Content Container Styling*****/
+			.modal-window-player .container-content{
+				grid-template-columns: repeat(1, auto);
+			}
+
+	/*****Competitions Page Styling*****/
+
+		/*****Competitions Controls Container Styling*****/
+		#competitions-container .container-controls{
+			display: flex;
+			justify-content: flex-end;
+		}
+
+			#competitions-container .container-controls .controls{
+				text-decoration: underline;
+				color: #00802b;
+				cursor: pointer;
+			}
+
+	/*****Chatroom Page Styling*****/
+	#chatroom-container{
+		padding: 10px 0px;
+	}
+
+			/*****Input Message Field Styling*****/
+			#input-message-field{
+				min-height: 100px;
+			}
+
+			/*****Message Board Styling*****/
+			#message-board{
+				min-height: 100px;
+				overflow-y: scroll;
+				border: 1px solid lightgrey;
+			}
+
+				#message-board::after{
+					content: "Sent Messages Will Display Here";
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+				}
+
+/*****Footer Styling*****/
+footer{
+	position: relative;
+	clear: both;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0px;
+	background-color: #00802b;
+}
+
+/**********************************************************************************************************************************Responsive Layout**********/
+
+/*******************************************************************************************************************Mobile Layout***************/
+@media only screen and (min-width: 320px){
+
+	/*****Card Styling*****/
+	.card{
+		justify-content: center;
+		align-items: center;
+	}
+
+		/*****Card Body Styling*****/
+		.card-body{
+			width: 100%;
+		}
+
+	/*****Collapse Styling*****/
+
+		/*****Collapse Item Styling*****/
+		.collapse-item{
+			grid-template-columns: repeat(1, auto);
+		}
+
+			/*****Collapse Image & Video Styling*****/
+			.collapse-item img, .collapse-item iframe{
+				width: 100%;
+			}
+
+			/*****Collapse Item Body Styling*****/
+			.collapse-item-body h1{
+				text-align: center;
+			}
+
+	/*****Modal Styling*****/
+	.modal-window{
+		width: 100%;
+	}
+
+	/*****Section Title Styling*****/
+	.section-title{
+		text-align: center;
+	}
+
+	/*****Header Styling*****/
+
+		/*****Menu Styling*****/
+		header #menu{
+			height: 100vh;
+			position: fixed;
+			top: 0%;
+			left: -100%;
+			z-index: 1;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			transition: all .5s ease-in-out;
+			padding-right: 20px;
+			background-color: #00802b;
+		}
+
+			header #menu a{
+				display: block;
+				margin: 10px 0px;
+			 	padding: 5px 0px 5px 5px;
+			}
+
+			header #menu .container-controls{
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				margin: 0px 0px;
+			}
+
+			/*****Display Menu When The Icon Is Pressed*****/
+			#checkbox:checked ~ #menu{
+				left: 0%;
+			}
+
+}
+
+/*******************************************************************************************************************Tablet Layout***************/
+@media only screen and (min-width: 768px){
+
+	/*****Card Styling*****/
+	.card{
+		justify-content: center;
+		align-items: center;
+	}
+
+		/*****Card Body Styling*****/
+		.card-body{
+			width: 100%;
+		}
+
+	/*****Section Title Styling*****/
+	.section-title{
+		text-align: left;
+	}
+
+	/*****Header Styling*****/
+
+		/*****Menu Styling*****/
+		header #menu{
+			height: 100vh;
+			position: fixed;
+			top: 0%;
+			left: -100%;
+			z-index: 1;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			transition: all .5s ease-in-out;
+			padding-right: 20px;
+			background-color: #00802b;
+		}
+
+			header #menu a{
+				display: block;
+				margin: 10px 0px;
+			 	padding: 5px 0px 5px 5px;
+			}
+
+			header #menu .container-controls{
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				margin: 0px 0px;
+			}
+
+			/*****Display Menu When The Icon Is Pressed*****/
+			#checkbox:checked ~ #menu{
+				left: 0%;
+			}
+
+	/*****Main Content Container Styling*****/
+
+		/*****Homepage Styling*****/
+		#home-container{
+			grid-template-columns: repeat(2, auto);
+		}
+
+		/*****Rules Page Styling*****/
+
+			/*****Collapse Item Styling*****/
+			#rules-container .collapse .collapse-item{
+				grid-template-columns: repeat(2, auto);
+			}
+
+				/*****Collapse Image & Video Styling*****/
+				#rules-container .collapse .collapse-item img, #rules-container .collapse .collapse-item iframe{
+					width: 50vw;
+				}
+
+				/*****Collapse Item Body Styling*****/
+				#rules-container .collapse .collapse-item-body{
+					padding: 0px 10px;
+				}
+
+				#rules-container .collapse .collapse-item-body h1{
+					text-align: initial;
+				}
+
+		/*****Players Page Styling*****/
+
+			/*****Player Modal Window Styling*****/
+			.modal-window-player{
+				width: 40%;
+			}
+
+}
+
+/*******************************************************************************************Laptop, Desktop & Large Screen Layout***************/
+@media only screen and (min-width: 992px){
+
+	button{
+		transition: background 1s, cursor 1s;
+	}
+
+		button:hover{
+			background: black;
+			cursor: pointer;
+		}
+
+	/*****Card Styling*****/
+	.card{
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+
+		/*****Card Body Styling*****/
+		.card-body{
+			width: 50%;
+			transition: background 1s;
+		}
+
+			.card-body h1{
+				transition: color 1s;
+			}
+
+		.card:hover .card-body{
+			background:rgba(255, 255, 255, 0.5);
+		}
+
+		.card:hover .card-body h1{
+			color: #00802b;
+		}
+
+	/*****Collapse Styling*****/
+
+		/*****Collapse Header Styling*****/
+		.collapse-header{
+			transition: cursor 1s;
+		}
+
+			.collapse-header:hover{
+				cursor: pointer;
+			}
+
+	/*****Slider Styling*****/
+
+			/*****Slider Item Styling*****/
+			.slider-item{
+				transition: 0.5s ease-in-out;
+			}
+
+				.slider-item:hover{
+					transform:scale(1.1,1.1);
+				}
+
+	/*****Section Title Styling*****/
+	.section-title{
+		text-align: left;
+	}
+
+	/*****Controls Container Styling*****/
+	.container-controls .controls{
+		transition: color 1s, cursor 1s;
+	}
+
+		.container-controls .controls:hover{
+			color: lightgrey;
+			cursor: pointer;
+		}
+
+	/*****Header Styling*****/
+
+		/*****Menu Styling*****/
+		header #menu-icon{
+			display: none;
+		}
+
+		header #menu{
+			position: initial;
+			overflow: hidden;
+			width: auto;
+			height: auto;
+			background-color: transparent;
+		}
+
+			header #menu a{
+				display: initial;
+				transition: color 1s;
+			}
+
+				header #menu a:hover{
+					color: lightgrey;
+				}
+
+			/*****Controls Container Styling*****/
+			header #menu .container-controls{
+				display: none;
+			}
+
+	/*****Main Content Container Styling*****/
+
+		/*****Homepage Styling*****/
+		#home-container{
+			grid-template-columns: repeat(2, auto);
+		}
+
+		/*****Rules Page Styling*****/
+
+			/*****Collapse Item Styling*****/
+			#rules-container .collapse .collapse-item{
+				grid-template-columns: repeat(2, auto);
+			}
+
+				/*****Collapse Image & Video Styling*****/
+				#rules-container .collapse .collapse-item img, #rules-container .collapse .collapse-item iframe{
+					width: 50vw;
+				}
+
+				/*****Collapse Item Body Styling*****/
+				#rules-container .collapse .collapse-item-body{
+					padding: 0px 10px;
+				}
+
+				#rules-container .collapse .collapse-item-body h1{
+					text-align: left;
+				}
+
+		/*****Players Page Styling*****/
+
+			/*****Player Modal Window Styling*****/
+			.modal-window-player{
+				width: 40%;
+			}
+
+		/*****Chatroom Page Styling*****/
+		#chatroom-container{
+			grid-template-columns: repeat(2, auto);
+			padding: 10px 5px;
+		}
+
+			#chatroom-container .container{
+				padding: 0px 5px;
+			}
+
+				#input-message-field{
+					border: 1px solid lightgrey;
+				}
+
+	/*****Footer Styling*****/
+
+		/*****Disclaimer Styling*****/
+		footer #disclaimer{
+			transition: color 1s, cursor 1s;
+		}
+
+			footer #disclaimer:hover{
+				color: lightgrey;
+				cursor: pointer;
+			}
+
+}
